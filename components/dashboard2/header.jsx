@@ -6,12 +6,9 @@ import { Bell, Moon } from "lucide-react";
 export default function Header() {
     return (
         <header className="h-16 bg-white border-b flex items-center justify-between px-6 shadow-sm">
-            {/* Left side */}
             <h2 className="text-lg font-semibold">Dashboard</h2>
 
-            {/* Right side */}
             <div className="flex items-center gap-4">
-                {/* Search */}
                 <div className="relative">
                     <Input
                         type="text"
@@ -33,18 +30,12 @@ export default function Header() {
                         />
                     </svg>
                 </div>
-
-                {/* Dark Mode Toggle */}
                 <button className="p-2 rounded hover:bg-gray-100">
                     <Moon className="h-5 w-5 text-gray-600" />
                 </button>
-
-                {/* Notifications */}
                 <button className="p-2 rounded hover:bg-gray-100 relative">
                     <Bell className="h-5 w-5 text-gray-600" />
                 </button>
-
-                {/* Avatar */}
                 <img
                     src="/pinLogo.png"
                     alt="user avatar"

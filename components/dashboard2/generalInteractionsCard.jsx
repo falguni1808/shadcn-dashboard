@@ -1,14 +1,10 @@
 "use client"
-
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts"
-
 const data = [
-    { name: "Previous Month", value: 75, fill: "#3b82f6" }, // Blue
-    { name: "Current Month", value: 90, fill: "#06b6d4" }, // Cyan
+    { name: "Previous Month", value: 75, fill: "#3b82f6" }, 
+    { name: "Current Month", value: 90, fill: "#06b6d4" }, 
 ]
-
 
 export function GeneralInteractionsCard() {
     return (
@@ -34,7 +30,6 @@ export function GeneralInteractionsCard() {
                         </RadialBarChart>
                     </ResponsiveContainer>
 
-                    {/* Center value */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                         <h3 className="text-2xl font-bold">$36,358</h3>
                         <p className="text-green-500 text-sm">+9% then last month ↑</p>
@@ -43,7 +38,6 @@ export function GeneralInteractionsCard() {
 
             
                 <div className="flex justify-center text-[12px] space-x-2 -mt-[2rem] ml-3">
-                    {/* Previous Month */}
                     <div className="flex flex-col items-center ">
                         <div className="flex items-center space-x-2">
                             <span className="w-3 h-3 rounded-full bg-blue-500"></span>
@@ -52,7 +46,6 @@ export function GeneralInteractionsCard() {
                         <span className="font-semibold text-gray-900">Aug</span>
                     </div>
 
-                    {/* Current Month */}
                     <div className="flex flex-col items-center">
                         <div className="flex items-center space-x-1">
                             <span className="w-3 h-3 rounded-full bg-indigo-500"></span>

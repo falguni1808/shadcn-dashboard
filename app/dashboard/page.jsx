@@ -2,9 +2,19 @@
 
 import StatCard from "@/components/dashboard/StatCard";
 import BarChartCard from "@/components/dashboard/BarChartCard";
-import { MessageSquare, Mail, Bot, MessageCircle, Calendar } from "lucide-react";
 import { LastCampaignsTable } from "@/components/dashboard/LastCampaignsTable";
 import { Button } from "@/components/ui/button";
+import {
+  MessageSquare,
+  MessageCircle,
+  MessageSquareText,
+  Mic,
+  Mail,
+  Bot,
+  MessagesSquare,
+  Activity,
+  Calendar
+} from "lucide-react";
 
 export default function DashboardPage() {
   const data = [
@@ -43,8 +53,6 @@ export default function DashboardPage() {
           Analytics
         </button>
       </div>
-
-      {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Total SMS Interactions"
@@ -60,49 +68,46 @@ export default function DashboardPage() {
         />
         <StatCard
           title="Total RCS Interactions"
-          value="41,231.89"
-          change="+20.1% from last month"
-          icon={<Mail size={18} />}
+          value="12,234"
+          change="+19% from last month"
+          icon={<MessageSquareText size={18} />}
         />
         <StatCard
           title="Total Voice Interactions"
-          value="12,234"
-          change="+80.1% from last month"
-          icon={<Bot size={18} />}
+          value="2,234"
+          change="+43% since last hour"
+          icon={<Mic size={18} />}
         />
         <StatCard
           title="Total Email Interactions"
-          value="2,234"
-          change="+19% from last month"
-          icon={<MessageSquare size={18} />}
-        />
-        <StatCard
-          title="Total Bot Interactions"
           value="41,231.89"
           change="+20.1% from last month"
-          icon={<MessageCircle size={18} />}
-        />
-        <StatCard
-          title="Total LiveChat Interactions"
-          value="+762350"
-          change="+80.1% from last month"
           icon={<Mail size={18} />}
         />
         <StatCard
-          title="Total Ads"
-          value="12,234"
-          change="+19% from last month"
+          title="Total Bot Interactions"
+          value="+762350"
+          change="+80.1% from last month"
           icon={<Bot size={18} />}
         />
+        <StatCard
+          title="Total Livechat Interactions"
+          value="12,234"
+          change="+19% from last month"
+          icon={<MessagesSquare size={18} />}
+        />
+        <StatCard
+          title="Total Ads"
+          value="+573"
+          change="201 since last hour"
+          icon={<Activity size={18} />}
+        />
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <BarChartCard title="Recent Interactions" data={data} />
         <BarChartCard title="General Interactions" data={data} />
       </div>
-
       <LastCampaignsTable />
-
     </div>
   );
 }
