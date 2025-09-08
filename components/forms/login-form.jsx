@@ -9,13 +9,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
 import { useState } from "react";
 import { Lock, Eye, EyeOff, Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export function LoginForm() {
 
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
+        <div className="grid h-220 grid-cols-1 md:grid-cols-2">
             <div className="flex flex-col items-center justify-between bg-blue-700 p-8 text-white">
                 <div className="w-full flex items-center justify-start">
                     <Image src="/1SpocLogo.png" alt="Login Illustration" width={586} height={30} className="object-contain" />
@@ -34,6 +35,7 @@ export function LoginForm() {
                         <DropdownMenuTrigger asChild>
                             <Button variant="outline" className="flex items-center gap-2">
                                 <span>🇺🇸 English</span>
+                                <ChevronDown className="w-4 h-4" />
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">

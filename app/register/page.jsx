@@ -7,12 +7,12 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import Image from "next/image";
 import { useState } from "react";
-import { Lock, Eye, EyeOff } from "lucide-react";
+import { Lock, Eye, EyeOff, ChevronDown } from "lucide-react";
 
 const Page = () => {
     const [showPassword, setShowPassword] = useState(false);
     return (
-        <div className="grid min-h-screen grid-cols-1 md:grid-cols-2 overflow-hidden">
+        <div className="grid h-220 grid-cols-1 md:grid-cols-2 overflow-hidden">
             <div className="flex flex-col justify-between bg-blue-900 p-12 text-white">
                 <div className="flex-1 flex flex-col justify-center items-start max-w-xl mx-auto">
                     <h1 className="text-6xl font-bold leading-tight mb-4 mt-18">
@@ -45,6 +45,7 @@ const Page = () => {
                 <div className="absolute top-4 left-6 flex items-center gap-2">
                     <Image
                         src="/1SPOC-Logo-Icon.png"
+                        alt="1SPOC-Logo"
                         width={20}
                         height={20}
                     />
@@ -55,6 +56,7 @@ const Page = () => {
                         <DropdownMenuTrigger asChild>
                             <Button variant="outline" className="flex items-center gap-2">
                                 <span>🇺🇸 English</span>
+                                <ChevronDown className="w-4 h-4" />
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
